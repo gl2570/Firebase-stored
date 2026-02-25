@@ -243,6 +243,7 @@ function initFirebaseDB() {
     storageBucket: "shared-minds-cf6ee.firebasestorage.app",
     messagingSenderId: "194053399340",
     appId: "1:194053399340:web:2201140b7d943f3fb60289",
+   databaseURL:"https://shared-minds-cf6ee-default-rtdb.firebaseio.com",
     measurementId: "G-GWHKDGCB93"
   };
   const app = initializeApp(firebaseConfig);
