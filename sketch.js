@@ -239,13 +239,13 @@ export function addImageRemote(imgURL, prompt, pos) {
 function initFirebaseDB() {
   // Initialize Firebase
   const firebaseConfig = {
-    apiKey: "AIzaSyDHOrU4Lrtlmk-Af2svvlP8RiGsGvBLb_Q",
-    authDomain: "sharedmindss24.firebaseapp.com",
-    databaseURL: "https://sharedmindss24-default-rtdb.firebaseio.com",
-    projectId: "sharedmindss24",
-    storageBucket: "sharedmindss24.appspot.com",
-    messagingSenderId: "1039430447930",
-    appId: "1:1039430447930:web:edf98d7d993c21017ad603"
+  apiKey: "AIzaSyCxWYLt3dkhSCZblBk2Iu9pBb5MILWOOMc",
+  authDomain: "shared-minds-cf6ee.firebaseapp.com",
+  projectId: "shared-minds-cf6ee",
+  storageBucket: "shared-minds-cf6ee.firebasestorage.app",
+  messagingSenderId: "194053399340",
+  appId: "1:194053399340:web:2201140b7d943f3fb60289",
+  measurementId: "G-GWHKDGCB93"
   };
   const app = initializeApp(firebaseConfig);
   db = getDatabase();
