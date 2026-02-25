@@ -1,6 +1,4 @@
-import {
-  initializeApp
-} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
 import {
   getDatabase,
   ref,
@@ -240,13 +238,12 @@ function initFirebaseDB() {
   // Initialize Firebase
   const firebaseConfig = {
   apiKey: "AIzaSyCxWYLt3dkhSCZblBk2Iu9pBb5MILWOOMc",
-  authDomain: "shared-minds-cf6ee.firebaseapp.com",
-  projectId: "shared-minds-cf6ee",
-  storageBucket: "shared-minds-cf6ee.firebasestorage.app",
-  messagingSenderId: "194053399340",
-  databaseURL: "https://shared-minds-cf6ee-default-rtdb.firebaseio.com",
-  appId: "1:194053399340:web:2201140b7d943f3fb60289",
-  measurementId: "G-GWHKDGCB93"
+    authDomain: "shared-minds-cf6ee.firebaseapp.com",
+    projectId: "shared-minds-cf6ee",
+    storageBucket: "shared-minds-cf6ee.firebasestorage.app",
+    messagingSenderId: "194053399340",
+    appId: "1:194053399340:web:2201140b7d943f3fb60289",
+    measurementId: "G-GWHKDGCB93"
   };
   const app = initializeApp(firebaseConfig);
   db = getDatabase();
