@@ -1,8 +1,173 @@
 html, body {
   margin: 0;
   padding: 0;
-  background:white
+  background: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 canvas {
   display: block;
+}
+
+/* ---- Login Screen ---- */
+#login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  z-index: 9999;
+}
+.login-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 36px 32px;
+  width: 340px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  text-align: center;
+}
+.login-card h1 {
+  margin: 0 0 4px;
+  font-size: 26px;
+  color: #1a1a2e;
+}
+.login-subtitle {
+  margin: 0 0 24px;
+  color: #666;
+  font-size: 14px;
+}
+.login-card input {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border-color .2s;
+}
+.login-card input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+.login-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.login-buttons button {
+  flex: 1;
+  padding: 11px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+.login-buttons button:hover { opacity: .85; }
+.login-buttons button:first-child {
+  background: #667eea;
+  color: #fff;
+}
+.login-buttons button.secondary {
+  background: #e8eaf6;
+  color: #333;
+}
+.login-divider {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+  color: #aaa;
+  font-size: 13px;
+}
+.login-divider::before,
+.login-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+.login-divider span { padding: 0 12px; }
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .2s, box-shadow .2s;
+}
+.google-btn:hover {
+  background: #f7f7f7;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.login-error {
+  color: #e53935;
+  font-size: 13px;
+  margin-top: 12px;
+  min-height: 18px;
+}
+
+/* ---- User Bar (when logged in) ---- */
+#user-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 10px;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user-avatar-placeholder {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #667eea;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+.user-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+#btn-signout {
+  margin-left: auto;
+  padding: 6px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background .2s;
+}
+#btn-signout:hover {
+  background: #f5f5f5;
 }
